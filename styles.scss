@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1rem;
+}
+
+nav {
+  background-color: var(--very-light-gray);
+  padding: 1rem 2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//nav stay fixed when active (when hamburger is clicked)
+nav.active {
+  position: fixed;
+  top: 0;
+}
+nav.active .nav--menu {
+  left: 0;
+  transition: left 0.3s ease-out;
+}
+li {
+  list-style: none;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.nav--right-side {
+  .nav--menu {
+    background-color: var(--very-dark-violet);
+    background-image: url(images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 15% right 0%;
+    background-size: contain;
+    width: 100vw;
+    min-height: 100vh; //cb
+    position: fixed;
+    left: -10000px;
+    top: 68px;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    transition: all 0.5s ease;
+
+    .nav--item {
+      padding-top: 1rem;
+      margin-bottom: 2rem;
+      transition: all 0.2s ease-out;
+    }
+    .nav--link {
+      font-weight: 700;
+      color: var(--very-light-gray);
+    }
+
+    .nav--item:last-of-type {
+      border: 2px solid var(--very-light-gray);
+      padding: 1rem 0 1rem;
+      &:hover {
+        background-color: var(--very-light-gray);
+        cursor: pointer;
+      }
+    }
+    .nav--item:last-of-type:hover .nav--link:last-of-type {
+      color: var(--very-dark-violet);
+    }
+  }
+}
+
+.img-mobile-site {
+  min-height: 450px;
+  background-image: url(images/image-intro-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+}
+.sections-wrapper {
+  background-image: url(images/bg-pattern-intro-left-mobile.svg),
+    url(images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, bottom -50px right 0;
+}
+
+.intro-section {
+  background-color: var(--dark-violet);
+  text-align: center;
+  color: var(--very-light-gray);
+  padding: 5rem 2rem;
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+  }
+  button {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: solid 2px var(--very-light-gray);
+    margin: 1rem 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
