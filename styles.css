@@ -15,10 +15,11 @@
 
 body {
   font-family: "Karla", sans-serif;
-  background-color: aqua;
+  background-color: var(--very-light-gray);
   width: 100vw;
   height: 100vh;
   font-size: 1rem;
+  text-align: center;
 }
 
 nav {
@@ -112,26 +113,40 @@ li a:hover {
   background-size: cover;
 }
 
-h2 {
+h2,
+h3 {
   font-family: "DM Serif Display", serif;
 }
 
 .sections-wrapper {
-  background-image: url(images/bg-pattern-intro-left-mobile.svg), url(images/bg-pattern-intro-right-mobile.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, bottom -50px right 0;
+  background-color: transparent;
+  background-image: url(images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top 30% right 0;
+}
+
+.section-header {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.dark-theme-button {
+  background-color: transparent;
+  color: var(--very-light-gray);
+  padding: 0.8rem 1.3rem;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: solid 2px var(--very-light-gray);
 }
 
 .intro-section {
+  background-image: url(images/bg-pattern-intro-left-mobile.svg);
+  background-repeat: no-repeat;
   background-color: var(--dark-violet);
-  text-align: center;
   color: var(--very-light-gray);
   padding: 5rem 2rem;
-}
-
-.intro-section h2 {
-  font-size: 2.8rem;
-  font-weight: 400;
 }
 
 .intro-section p {
@@ -141,23 +156,105 @@ h2 {
 }
 
 .intro-section button {
-  background-color: transparent;
-  color: var(--very-light-gray);
-  padding: 0.8rem 1.3rem;
-  text-transform: uppercase;
-  font-family: "Karla", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  border: solid 2px var(--very-light-gray);
   margin: 1rem 0;
 }
 
+.quality-section {
+  color: var(--dark-violet);
+  padding: 10rem 2rem 4rem 2rem;
+}
+
+.quality-section h2 {
+  margin: 2rem 0;
+}
+
+.quality-section hr {
+  width: 40%;
+  border: solid 0.5px rgba(115, 88, 119, 0.5);
+  margin: 0 auto;
+}
+
+.quality--item {
+  margin: 4rem 0;
+}
+
+.quality--item h3 {
+  font-size: 2rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.quality--item p {
+  color: var(--dark-grayish-violet);
+  line-height: 1.5;
+}
+
+.how-we-work-section {
+  background-color: var(--dark-violet);
+  background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  color: var(--very-light-gray);
+  padding: 4rem 0;
+  margin: 0 1.5rem 10rem 1.5rem;
+}
+
+.how-we-work-section h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.how-we-work-section button {
+  margin: 2rem 0 0 0;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.02);
+  background-image: url(images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  padding: 4rem 0 0 0;
+}
+
+footer hr {
+  width: 90%;
+  margin: 0 auto;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.footer--social-media {
+  margin: 2rem 0;
+}
+
+.footer--social-media ul li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.footer--bottom {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer--subheader {
+  color: var(--dark-grayish-violet);
+  margin: 2rem 0;
+}
+
+.footer--item ul li {
+  margin: 1rem 0;
+}
+
+.footer--item ul li a {
+  color: var(--dark-violet);
+}
+
 .attribution {
+  padding: 2rem 0 0.5rem;
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: var(--very-dark-violet);
 }
 /*# sourceMappingURL=styles.css.map */
