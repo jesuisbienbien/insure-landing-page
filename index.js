@@ -11,7 +11,3 @@ hamburger.addEventListener("click", ()=> {
     
 })
 
-if(window.screen.width >= 768) {
-
-    document.querySelector(".img-mobile-site").style.backgroundImage = "url(images/image-intro-desktop.jpg)";
-}
