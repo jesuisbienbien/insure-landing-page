@@ -20,6 +20,7 @@ body {
   height: 100vh;
   font-size: 1rem;
   text-align: center;
+  overflow-x: hidden;
 }
 
 nav {
@@ -166,6 +167,8 @@ h3 {
   font-weight: 400;
   line-height: 1.5rem;
   margin: 1rem 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .intro-section button {
@@ -211,6 +214,8 @@ h3 {
 .quality--item p {
   color: var(--dark-grayish-violet);
   line-height: 1.5;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .how-we-work-section {
@@ -380,6 +385,7 @@ footer hr {
   }
   .sections-wrapper .intro-section p {
     width: 48%;
+    margin: 0;
   }
   .sections-wrapper .intro-section button {
     font-size: 0.8rem;
